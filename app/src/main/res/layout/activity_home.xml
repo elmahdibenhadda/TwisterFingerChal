@@ -75,7 +75,7 @@
 
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/Jouer"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_weight="15"
@@ -83,17 +83,6 @@
         android:layout_gravity="center"
         android:onClick="login"
         android:text="@string/toGame"
-        android:layout_marginTop="50dp"/>
-
-    <Button
-        android:id="@+id/stopSound"
-        android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:layout_weight="15"
-        android:paddingLeft="5dp"
-        android:layout_gravity="center"
-        android:onClick="login"
-        android:text="stop"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>

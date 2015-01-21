@@ -1,6 +1,7 @@
 package com.example.mehdi.twisterfinger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.PowerManager;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mehdi.twisterfinger.sound.SoundMetter;
@@ -21,47 +23,20 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends ActionBarActivity implements View.OnClickListener {
 
-    private Button btnPlay = null;
-    private Button btnStopSound = null;
-    private SoundMetter mngSound = null;
-    private MediaRecorder mRecorder = null;
-    private Timer timer = null;
-    private RecorderTask recorderTask = null;
-
+    private Button btnJouer = null;
+    private EditText joueurs;
+    private EditText doits;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        btnJouer = (Button) findViewById(R.id.Jouer);
+        doits = (EditText) findViewById(R.id.nbrFingersEdit);
+        joueurs = (EditText) findViewById(R.id.nbrGamersEdit);
 
-
-        mngSound = new SoundMetter();
-
-
-
-        btnPlay = (Button) findViewById(R.id.playButton);
-        btnStopSound = (Button) findViewById(R.id.stopSound);
-
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timer = new Timer();
-                recorderTask = new RecorderTask(mngSound);
-                timer.scheduleAtFixedRate(recorderTask, 0, 1000);
-
-                Toast.makeText(getApplicationContext(), "recording audio", Toast.LENGTH_LONG).show();
-            }
-
-        });
-
-        btnStopSound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("msg : ","CLICKED");
-                vibrateOrSound();
-            }
-        });
+        btnJouer.setOnClickListener(this);
     }
 
 
@@ -102,26 +77,14 @@ public class HomeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
 
     }
-}
 
- class RecorderTask extends TimerTask {
-    private SoundMetter recorder;
 
-    public RecorderTask(SoundMetter recorder) {
-        this.recorder = recorder;
-        this.recorder.start();
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("joueurs", Integer.parseInt(joueurs.getText().toString()));
+        intent.putExtra("doits",Integer.parseInt( doits.getText().toString()));
+        startActivity(intent);
+
     }
-
-    public void run() {
-        while(recorder.getAmplitude() > 7){
-            // tournerLaRoulettePendant(Xsec);
-            Log.e("msg : ","Catourne");
-        }
-        Log.i("", "amplitude is" + recorder.getAmplitude());
-    }
-
-     public void stop(){
-         this.recorder.stop();
-     }
-
 }
