@@ -4,5 +4,12 @@
     <string name="app_name">TwisterFinger</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home_page">Welcome</string>
+    <string name="nbrJoueur">number of gamers </string>
+    <string name="nbrFingers">number of fingers </string>
+    <string name="toGame">PLAY</string>
+
+
 
 </resources>
