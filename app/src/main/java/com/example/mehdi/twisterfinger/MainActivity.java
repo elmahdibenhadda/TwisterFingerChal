@@ -1,17 +1,73 @@
 package com.example.mehdi.twisterfinger;
 
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
+    ImageView blue1;
+    ImageView vert2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.circles_layout);
+        blue1=(ImageView) findViewById(R.id.blue1);
+        vert2=(ImageView) findViewById(R.id.vert2);
+        blue1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction())
+                {
+                    case MotionEvent.ACTION_UP:
+                    {
+                        Log.e("UP", "UP");
+                        blue1.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                    }break;
+                    case MotionEvent.ACTION_DOWN:
+                    {
+                        Log.e("Down","Down");
+                        blue1.setBackgroundColor(Color.GRAY);
+
+                    }break;
+
+                }
+                return true;
+            }
+
+        });
+
+        vert2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction())
+                {
+                    case MotionEvent.ACTION_UP:
+                    {
+                        Log.e("UP", "UP");
+                        vert2.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                    }break;
+                    case MotionEvent.ACTION_DOWN:
+                    {
+                        Log.e("Down","Down");
+                        vert2.setBackgroundColor(Color.GRAY);
+
+                    }break;
+
+                }
+                return true;
+            }
+
+        });
     }
 
 

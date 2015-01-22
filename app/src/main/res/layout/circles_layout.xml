@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="100"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:weightSum="100"
+        android:layout_weight="60"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="25"
+            android:weightSum="100"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/blue1"
+                android:src="@drawable/bleu"
+                android:layout_weight="25"
+                 />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/rouge1"
+                android:src="@drawable/rouge"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/jaune1"
+                android:src="@drawable/jaune"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/vert1"
+                android:src="@drawable/vert"
+                android:layout_weight="25"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="25"
+            android:weightSum="100"
+            >        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/blue2"
+            android:src="@drawable/bleu"
+            android:layout_weight="25"
+            />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/rouge2"
+                android:src="@drawable/rouge"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/jaune2"
+                android:src="@drawable/jaune"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/vert2"
+                android:src="@drawable/vert"
+                android:layout_weight="25"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="25"
+            android:weightSum="100"
+
+            >
+            <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/blue3"
+            android:src="@drawable/bleu"
+            android:layout_weight="25"
+
+            />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/rouge3"
+                android:src="@drawable/rouge"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/jaune3"
+                android:src="@drawable/jaune"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/vert3"
+                android:src="@drawable/vert"
+                android:layout_weight="25"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="25"        android:weightSum="100"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/blue4"
+                android:src="@drawable/bleu"
+                android:layout_weight="25"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/rouge4"
+                android:src="@drawable/rouge"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/jaune4"
+                android:src="@drawable/jaune"
+                android:layout_weight="25"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/vert4"
+                android:src="@drawable/vert"
+                android:layout_weight="25"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:background="#FFFFFF">
+</LinearLayout>
+
+    </LinearLayout>
