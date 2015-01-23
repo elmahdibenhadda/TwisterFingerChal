@@ -25,11 +25,11 @@ public class HomeActivity extends ActionBarActivity {
 
     private Button btnPlay = null;
     private Button btnStopSound = null;
-    private SoundMetter mngSound = null;
+
     private MediaRecorder mRecorder = null;
     private Timer timer = null;
-    private RecorderTask recorderTask = null;
-
+    //private RecorderTask recorderTask = null;
+    private SoundMetter mngSound = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +47,8 @@ public class HomeActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 timer = new Timer();
-                recorderTask = new RecorderTask(mngSound);
-                timer.scheduleAtFixedRate(recorderTask, 0, 1000);
+            //    recorderTask = new RecorderTask(mngSound);
+              //  timer.scheduleAtFixedRate(recorderTask, 0, 1000);
 
                 Toast.makeText(getApplicationContext(), "recording audio", Toast.LENGTH_LONG).show();
             }
@@ -103,7 +103,7 @@ public class HomeActivity extends ActionBarActivity {
 
     }
 }
-
+/*
  class RecorderTask extends TimerTask {
     private SoundMetter recorder;
 
@@ -124,4 +124,4 @@ public class HomeActivity extends ActionBarActivity {
          this.recorder.stop();
      }
 
-}
+}*/

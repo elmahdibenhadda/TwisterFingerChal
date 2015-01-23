@@ -30,12 +30,58 @@ public final class TheGame {
         return TheGame.instance;
     }
 
+    public int getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(int currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    public Colors getCurrentRouletteColor() {
+        return currentRouletteColor;
+    }
+
+    public void setCurrentRouletteColor(Colors currentRouletteColor) {
+        this.currentRouletteColor = currentRouletteColor;
+    }
+
+    public Colors getCurrentCircleColor() {
+        return currentCircleColor;
+    }
+
+    public void setCurrentCircleColor(Colors currentCircleColor) {
+        this.currentCircleColor = currentCircleColor;
+    }
+
+    public int getNbrDoigt() {
+        return nbrDoigt;
+    }
+
+    public void setNbrDoigt(int nbrDoigt) {
+        this.nbrDoigt = nbrDoigt;
+    }
+
+    public int getNbrJoueur() {
+        return nbrJoueur;
+    }
+
+    public void setNbrJoueur(int nbrJoueur) {
+        this.nbrJoueur = nbrJoueur;
+    }
+
+    public static TheGame getInstance() {
+        return instance;
+    }
+
+    public static void setInstance(TheGame instance) {
+        TheGame.instance = instance;
+    }
 
     // ou bien cette fct peut aller chercher d'une autre classe la couleur du cercle appuyé
     // ==> dans ce cas on fait passer que la couleur de la roulette
-    public boolean checkForTheGame(Colors ofCircle, Colors ofRoulette){
-        currentCircleColor = ofCircle;
-        currentRouletteColor = ofRoulette;
+    public boolean checkForTheGame(){
+
         if(currentCircleColor == currentRouletteColor)
             return true;
         else
